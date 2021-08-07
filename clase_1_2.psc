@@ -1,5 +1,5 @@
 
-SubProceso leer_datos(nombre,cantidad,monto_ventas)
+SubProceso leer_datos(nombre por referencia,cantidad por referencia,monto_ventas por referencia)
 	
 	Mostrar "Ingrese el nombre del empleado"
 	leer nombre
@@ -10,10 +10,10 @@ SubProceso leer_datos(nombre,cantidad,monto_ventas)
 	
 FinSubProceso
 
-subproceso Calc_Salario(salario_final,comision_car,comision_venta,Sueldo_min,nombre ,cantidad, monto_ventas)
+subproceso Calc_Salario(salario_final Por Referencia,comision_car por referencia,comision_venta,Sueldo_min,nombre ,cantidad , monto_ventas)
 	
 	Sueldo_min=120
-	comision_car=30*cantidad
+	comision_car=300*cantidad
 	comision_venta=monto_ventas*0.18
 	salario_final=Sueldo_min+comision_car+comision_venta
 	
@@ -22,6 +22,7 @@ finsubproceso
 subproceso mostrar_todo(nombre,monto_ventas,cantidad,salario_final)
 	
 	escribir "El Nombre del empleado es: ", nombre
+	Escribir "comision por autos vendidos: ", comision_car
 	Escribir "el monto total de ventas es: ", monto_ventas
 	Escribir "El total de carros vendidos es: ", cantidad
 	Escribir "El Salario final es: ", salario_final

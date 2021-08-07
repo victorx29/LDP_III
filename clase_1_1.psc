@@ -1,15 +1,14 @@
-subproceso saludar(nombre)
+subproceso saludar(nombre por referencia,nota1 por referencia, nota2 por referencia, nota3 por referencia)
 	
 	Escribir "Ingresar nombre"
 	Leer nombre
 	Mostrar "Hola " nombre " bienvendio"
+	Escribir "Ingrese la nota 1, nota 2, nota 3"
+	leer nota1, nota2, nota3
 	
 FinSubProceso
 
-subproceso calcular(nota1, nota2, nota3, promedio)
-	
-	Escribir "Ingrese la nota 1, nota 2, nota 3"
-	leer nota1, nota2, nota3
+subproceso calcular(promedio por referencia,nota1,nota2,nota3)
 	
 	promedio= (nota1+nota2+nota3)/3
 	
@@ -20,19 +19,19 @@ subproceso calcular(nota1, nota2, nota3, promedio)
 	
 FinSubProceso
 
-SubProceso despedirse()
+SubProceso despedirse(nombre)
 	
 	Escribir ""
-	Escribir "Hasta luego...!", nombre
+	Escribir "Hasta luego...! ", nombre
 	
 FinSubProceso
 	
 Algoritmo sin_titulo
 	
 	escribir "Practica 1"
-	saludar(nombre)
-	calcular(nota1, nota2, nota3, promedio)
-	despedirse()
+	saludar(nombre,nota1,nota2,nota3)
+	calcular(promedio,nota1,nota2,nota3)
+	despedirse(nombre)
 	
 	
 FinAlgoritmo
